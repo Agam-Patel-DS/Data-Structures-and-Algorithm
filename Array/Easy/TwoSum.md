@@ -17,3 +17,6 @@ def twosum(arr, num):
 count=twosum(arr,num)
 print(f"There are total {count} pairs.") #output should be 1+9, 2+8, 4+6 = 3
 ```
+### Explaination
+  - `len(arr)` : Length of array `arr`
+  - `twosum(arr,num)` : The function to find the number of pairs.
