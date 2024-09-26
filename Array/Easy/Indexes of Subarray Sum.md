@@ -27,8 +27,24 @@ Explanation: There is no subarray with sum 2
 - Expected Time Complexity: O(n)
 - Expected Auxiliary Space: O(1)
 
-Constraints:
+## Solution
+```
+def subarray_sum(arr,n,s):
+    sum=0
+    head=0
+    tail=0
+    for i in range(0,len(arr)):
+        sum=sum+arr[head]
+        while sum>s:
+            sum=sum-arr[tail]
+            tail=tail+1
+        if (sum==s) and (tail<=head):
+            #print(f"Lenght={n}")
+            return [tail+1, head+1]
+        head=head+1
+        
+    
+    #print(sum,s,arr[tail-1],arr[head-1], n)
+    return [-1]
 
-  - 0 <= arr[i] <= 109
-  - 1 <= n <= 105
-  - 0 <= s <= 109
+```
