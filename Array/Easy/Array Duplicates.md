@@ -23,6 +23,8 @@ Constraints:
 ## Solution
 
 ```
+python
+
 def counts(arr,n):
     unique=list(set(arr))      # list of uniquely present values in array
     repeated=[]       #list to store repeated elements
