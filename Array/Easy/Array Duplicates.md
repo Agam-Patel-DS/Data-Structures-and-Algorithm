@@ -19,3 +19,22 @@ Constraints:
 
 - 1 <= n <= 105
 - 0 <= arr[i] <= 105, for each valid i
+
+## Solution
+
+```
+def counts(arr,n):
+    unique=list(set(arr))      # list of uniquely present values in array
+    repeated=[]       #list to store repeated elements
+    flag=0         #to check whether any repeated elemen is present or not
+    for i in range(0,len(unique)):     # for i = 0 to i=(lenght of unique -1)
+        if arr.count(unique[i])>1:     # if count of elemen in unique is greater than 1 in arr
+            repeated.append(unique[i])      # insert that element in repeated
+            flag=1
+    repeated.sort()    #sort the repeated value array
+    
+    if flag==1:
+        return repeated
+    if flag==0:
+        return -1    
+```
