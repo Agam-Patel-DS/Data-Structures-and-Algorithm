@@ -38,5 +38,5 @@ def counts(arr,n):
     if flag==1:
         return repeated
     if flag==0:
-        return -1    
+        return [-1]    
 ```
