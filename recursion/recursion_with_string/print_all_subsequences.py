@@ -6,12 +6,14 @@ def print_subsequences(string, takenSoFar):
         return
     
     currentChar = string[0]
+    smallInput=string[1:]
 
-    
-    
+    print_subsequences(smallInput, takenSoFar+currentChar) #taken
+    print_subsequences(smallInput, takenSoFar) #not-taken
 
 
+    return
 
-
-string = "abc"
+string = "a"
 print_subsequences(string, "")
+print("<<<<<<----DONE---->>>>>>")
