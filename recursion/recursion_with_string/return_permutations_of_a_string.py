@@ -1,4 +1,4 @@
-# Origional
+#  My Origional
 def return_permutations(string, takenSoFar):
     if len(string)==0:
         return [takenSoFar]
@@ -15,7 +15,7 @@ def return_permutations(string, takenSoFar):
 
     return ans
 
-# Course Solution
+# The Course Solution
 def return_permutations_2(string):
     if len(string)==0:
         return [""]
@@ -30,7 +30,7 @@ def return_permutations_2(string):
 
     return ans
 
-string = "abcd"
+string = "123"
 
 print(return_permutations(string,""), "\n")
-print(return_permutations_2(string))
+#print(return_permutations_2(string))
