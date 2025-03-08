@@ -1,7 +1,6 @@
 from common import Node, print_ll, take_inputs, length
 
-def insert_at_head(head):
-    value=int(input("Enter the value: "))
+def insert_at_head(head, value):
     newNode=Node(value)
     newNode.next=head
     head=newNode

@@ -42,3 +42,20 @@ def length(head):
         ans+=1
 
     return ans
+
+def insert_at_head(head,value):
+    newNode=Node(value)
+    newNode.next=head
+    head=newNode
+    return head
+
+def insert_at_tail(head,value):
+    newNode=Node(value)
+    if head==None:
+        print("Empty Linked List")
+        return newNode
+    temp=head
+    while temp.next!=None:
+        temp=temp.next
+    temp.next=newNode
+    return head
