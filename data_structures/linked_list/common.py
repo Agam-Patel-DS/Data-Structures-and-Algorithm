@@ -49,6 +49,30 @@ def insert_at_head(head,value):
     head=newNode
     return head
 
+def delete_head(head):
+    """
+    parameter: head
+    returns: head
+    """
+    if head==None or head.next==None:
+        return None
+    newhead=head.next
+    return newhead
+
+def delete_tail(head):
+    """
+    parameter: head
+    returns: head
+    """
+    if head==None or head.next==None: # empty linked list or single node
+        return None
+    temp=head
+    while(temp.next.next!=None): # reaching second last node
+        temp=temp.next
+    temp.next=None # breaking the link between second last and last node
+    return head # return head
+
+
 def insert_at_tail(head,value):
     newNode=Node(value)
     if head==None:
