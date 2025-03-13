@@ -32,10 +32,23 @@ def delete_at_index(head,index):
 
     return head
     
+def delete_at_index_recursive(head,index):
+    if head==None:
+        print("Index Out of Bounds")
+        return None
+    if index==0:
+        return head.next
+
+    head.next=delete_at_index_recursive(head.next,index-1)
+    return head
 
 head=take_inputs()
 print_ll(head)
 index=int(input("Enter the index to delete: "))
 head=delete_at_index(head,index)
+print("\nAfter Deletion")
+print_ll(head)
+index=int(input("Enter the index to delete: "))
+head=delete_at_index_recursive(head,index)
 print("\nAfter Deletion")
 print_ll(head)

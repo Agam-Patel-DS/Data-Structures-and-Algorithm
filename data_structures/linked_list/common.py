@@ -11,7 +11,7 @@ class Node:
 def print_ll(head):
     temp=head  #dont lose your head!!!
     while(temp!=None):
-        print(temp.data,"-->",end="")
+        print(temp.data,"--> ",end="")
         temp=temp.next
 
     return
@@ -82,4 +82,18 @@ def insert_at_tail(head,value):
     while temp.next!=None:
         temp=temp.next
     temp.next=newNode
+    return head
+
+def createLlFromList(l1):
+    head=None
+    tail=None
+    for value in l1:
+        newNode=Node(value)
+        if head==None:
+            head=newNode
+            tail=newNode
+        else:
+            tail.next=newNode
+            tail=newNode
+
     return head
