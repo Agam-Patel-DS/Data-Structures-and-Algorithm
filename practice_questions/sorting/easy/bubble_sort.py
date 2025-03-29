@@ -8,6 +8,8 @@ def bubbleSort(arr):
 
     return arr
 
+    
+
 arr=[23,12,32,13,53,1]
 print("Before Sorting: ",arr)
 bubbleSort(arr)
