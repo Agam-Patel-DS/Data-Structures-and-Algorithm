@@ -107,3 +107,14 @@ def length(head):
         ans+=1
 
     return ans
+
+def reverseLL(head):
+    """Creates and returns a reversed copy of the linked list."""
+    new_head = None
+    temp = head
+    while temp:
+        new_node = Node(temp.data)
+        new_node.next = new_head
+        new_head = new_node
+        temp = temp.next
+    return new_head
