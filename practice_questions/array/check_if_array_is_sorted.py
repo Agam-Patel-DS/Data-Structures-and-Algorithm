@@ -1,4 +1,4 @@
-#TBC
+#C
 def isArraySorted(arr):
     if len(arr)==1 or len(arr)==0:
         return True

@@ -1,4 +1,4 @@
-#TBC
+#C
 
 def secondLargestWithoutSorting(arr):
     if len(arr)==0:
@@ -20,5 +20,5 @@ def secondLargestWithoutSorting(arr):
     
     return secondLargest
 
-arr=[]
+arr = [30, 30, 20]
 print(secondLargestWithoutSorting(arr))
