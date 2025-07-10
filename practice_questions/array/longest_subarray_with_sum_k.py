@@ -1,0 +1,1 @@
+# Subarray is contigious
