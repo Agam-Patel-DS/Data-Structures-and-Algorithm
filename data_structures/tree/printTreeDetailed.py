@@ -9,14 +9,21 @@ child2=TreeNode(3)
 child3=TreeNode(4)
 
 root.children.append(child1)
-root.children.append(child2)
+child1.children.append(child2)
 root.children.append(child3)
 
-def printTree(root):
+def printTreeDetailed(root):
     if root==None:
         return
-    print(root.data)
+    
+    print(root.data, end=":")
+    
     for eachChild in root.children:
-        printTree(eachChild)
+        print(eachChild.data,end=",")
 
-printTree(root)
+    print()
+
+    for eachChild in root.children:
+        printTreeDetailed(eachChild)
+
+# printTreeDetailed(root)
